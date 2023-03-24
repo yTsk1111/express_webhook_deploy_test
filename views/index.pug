@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  p current count #{count}
+  p Welcome to #{title}
+  form(action='/increment', method='get')
+    button(type='submit') Increment
