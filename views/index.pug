@@ -4,5 +4,10 @@ block content
   h1= title
   p current count #{count}
   p Welcome to #{title}
+  p(id="test_line") 初期値:0
+  button(id="sample") 送信
   form(action='/increment', method='get')
     button(type='submit') Increment
+
+block scripts
+    script(src='/javascripts/websocket.js')
