@@ -1,5 +1,5 @@
 console.log("送信ボタンを押して下さい");
-var sock = new WebSocket('ws://localhost:3005');
+var sock = new WebSocket('ws://localhost:3010');
 
 sock.addEventListener('open', function (e) {// 接続
   console.log('Socket 接続成功');
