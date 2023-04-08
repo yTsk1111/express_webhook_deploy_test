@@ -7,21 +7,25 @@ sock.addEventListener('open', function (e) {// 接続
 
 sock.addEventListener('message', function (e) {// サーバーからデータを受け取る
   console.log(e.data);
+  let count = e.data;
   elm = document.getElementById("counter");
-  updated = '挙手数：' + e.data
+  updated = '挙手数：' + count
+  if (count == 0) {
+    document.getElementById('kyosyu_image').style.display = 'none';
+  } else if (count > 0) {
+    document.getElementById('kyosyu_image').style.display = 'inline';
+  }
   elm.textContent = updated;
 });
 
 document.addEventListener('DOMContentLoaded', function (e) {
   document.getElementById('kyosyu').addEventListener('click', function (e) {
-    document.getElementById('kyosyu_image').style.display = 'inline';
     sock.send('kyosyu');
   });
 });
 
 document.addEventListener('DOMContentLoaded', function (e) {
   document.getElementById('reset_kyosyu').addEventListener('click', function (e) {
-    document.getElementById('kyosyu_image').style.display = 'none';
     sock.send('reset');
   });
 });
