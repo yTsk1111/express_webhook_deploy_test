@@ -1,5 +1,5 @@
 console.log("送信ボタンを押して下さい");
-var sock = new WebSocket('ws://localhost:3011');
+var sock = new WebSocket('ws://express_webhook_deploy_test:3011');
 
 sock.addEventListener('open', function (e) {// 接続
   console.log('Socket 接続成功');
