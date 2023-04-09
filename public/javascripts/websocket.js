@@ -1,6 +1,6 @@
 console.log("送信ボタンを押して下さい");
 var sock = new WebSocket('wss://sudo-delete-web-service-express-webhook.onrender.com');
-// var sock = new WebSocket('ws://localhost:3013');
+// var sock = new WebSocket('ws://localhost:3014');
 
 sock.addEventListener('open', function (e) {// 接続
   console.log('Socket 接続成功');
