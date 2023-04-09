@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const WebSocket = require('ws');
-const wss = new WebSocket.Server({ port: 3012 });
+const wss = new WebSocket.Server({ port: 3013 });
 
 let count = 0;
 let CLIENTS = []; // クライアントのリスト
